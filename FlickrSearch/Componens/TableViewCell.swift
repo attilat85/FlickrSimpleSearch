@@ -24,6 +24,8 @@ class TableViewCell: UITableViewCell {
         let url = URL(string: photo?.url ?? "")
         photoImageView?.contentMode = .scaleAspectFit
         photoImageView?.kf.setImage(with: url)
+        separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: .greatestFiniteMagnitude)
+        selectionStyle = .none
     }
 
     override func prepareForReuse() {

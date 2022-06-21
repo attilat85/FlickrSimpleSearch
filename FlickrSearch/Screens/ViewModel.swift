@@ -32,14 +32,19 @@ final class ViewModel {
     }
 
     private func getRecentPhotos(page: Int) {
-        _state.onNext(.loading)
+        if page == 0 {
+            photos = [] //reset content and show loading indicator
+        }
+        if photos.isEmpty {
+            _state.onNext(.loading)
+        }
         Task {
             do {
                 photosPage = try await service.getRecentPhotos(page: page)
                 if page == 0 {
                     photos = photosPage?.photo ?? []
                 } else {
-                    photos += photosPage?.photo ?? []
+                    photos += photosPage?.photo ?? [] // when is load more append the photos
                 }
                 DispatchQueue.main.async { [weak self] in
                     self?._state.onNext(.content)
@@ -53,12 +58,18 @@ final class ViewModel {
     }
 
     func search(page: Int = 0) {
+        if page == 0 {
+            photos = [] //reset content and show loading indicator
+        }
+
         guard let text = searchText else {
             photos = []
             _state.onNext(.content)
             return
         }
-        _state.onNext(.loading)
+        if photos.isEmpty {
+            _state.onNext(.loading)
+        }
         Task {
             do {
                 photosPage = try await service.searchPhotos(text: text, page: page)
@@ -80,14 +91,12 @@ final class ViewModel {
 
     func loadMore() {
         let page = (photosPage?.page ?? 0) + 1
-        print("--> loadMore: \(searchText) - \(page)")
+        
         guard page < (photosPage?.pages ?? 0) else { return }
 
         if !(searchText?.isEmpty ?? true) {
-            print("--> search: \(searchText) - \(page)")
             search(page: page)
         } else {
-            print("--> getRecentPhotos: \(searchText) - \(page)")
             getRecentPhotos(page: page)
         }
     }

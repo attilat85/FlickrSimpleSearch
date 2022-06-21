@@ -29,6 +29,8 @@
 		0AA1E4C52860F47E00BC74AE /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1E4C32860F47E00BC74AE /* TableViewCell.swift */; };
 		0AA1E4C62860F47E00BC74AE /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA1E4C42860F47E00BC74AE /* TableViewCell.xib */; };
 		0AA1E4C828610A2E00BC74AE /* SearchPhotosApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1E4C728610A2E00BC74AE /* SearchPhotosApi.swift */; };
+		0AA1E4CB28618CF600BC74AE /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA1E4C928618CF600BC74AE /* LoadingCell.swift */; };
+		0AA1E4CC28618CF600BC74AE /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AA1E4CA28618CF600BC74AE /* LoadingCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		0AA1E4C32860F47E00BC74AE /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		0AA1E4C42860F47E00BC74AE /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		0AA1E4C728610A2E00BC74AE /* SearchPhotosApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPhotosApi.swift; sourceTree = "<group>"; };
+		0AA1E4C928618CF600BC74AE /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		0AA1E4CA28618CF600BC74AE /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		F07A90786BD62DA9CF636A4B /* Pods_FlickrSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FlickrSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -127,6 +131,8 @@
 				0AA1E4BC2860E46C00BC74AE /* ReusableView.swift */,
 				0AA1E4C32860F47E00BC74AE /* TableViewCell.swift */,
 				0AA1E4C42860F47E00BC74AE /* TableViewCell.xib */,
+				0AA1E4C928618CF600BC74AE /* LoadingCell.swift */,
+				0AA1E4CA28618CF600BC74AE /* LoadingCell.xib */,
 			);
 			path = Componens;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 				0AA1E4932860AC0500BC74AE /* LaunchScreen.storyboard in Resources */,
 				0AA1E4C62860F47E00BC74AE /* TableViewCell.xib in Resources */,
 				0AA1E4902860AC0500BC74AE /* Assets.xcassets in Resources */,
+				0AA1E4CC28618CF600BC74AE /* LoadingCell.xib in Resources */,
 				0AA1E48E2860AC0300BC74AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +263,7 @@
 				0AA1E4AE2860DC5A00BC74AE /* ViewModel.swift in Sources */,
 				0AA1E4A22860D42900BC74AE /* GetRecentApi.swift in Sources */,
 				0AA1E4BD2860E46C00BC74AE /* ReusableView.swift in Sources */,
+				0AA1E4CB28618CF600BC74AE /* LoadingCell.swift in Sources */,
 				0AA1E48B2860AC0300BC74AE /* ViewController.swift in Sources */,
 				0AA1E4B72860E04500BC74AE /* Photo.swift in Sources */,
 				0AA1E4872860AC0300BC74AE /* AppDelegate.swift in Sources */,

@@ -22,18 +22,8 @@ class TableViewCell: UITableViewCell {
     private func updateUI() {
         titleLabel?.text = photo?.title
         let url = URL(string: photo?.url ?? "")
-        print(url?.absoluteString)
         photoImageView?.contentMode = .scaleAspectFit
         photoImageView?.kf.setImage(with: url)
-//        imageView?.kf.setImage(with: url, placeholder: nil, options:[.cacheMemoryOnly], completionHandler: { [weak self] result in
-//            switch result {
-//            case .success(let image):
-//                print("result: ", url?.absoluteString, " - ", self?.imageView)
-//                self?.imageView?.image = image.image
-//            case .failure(let error):
-//                print(error.localizedDescription)
-//            }
-//        })
     }
 
     override func prepareForReuse() {

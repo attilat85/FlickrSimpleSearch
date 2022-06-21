@@ -16,8 +16,12 @@ final class PhotosService {
         networkClient = NetworkClient(config: APIConfiguration(baseUrl: API.backendURL), session: Alamofire.Session())
     }
 
-    func getRecentPhotos() async throws -> Photos {
-        try await GetRecentApi(networkClient: networkClient).getRecentPhotos().photos
+    func getRecentPhotos(page: Int) async throws -> Photos {
+        try await GetRecentApi(networkClient: networkClient).getRecentPhotos(page: page).photos
+    }
+
+    func searchPhotos(text: String, page: Int) async throws -> Photos {
+        try await SearchPhotosApi(networkClient: networkClient).searchPhotos(text: text, page: page).photos
     }
 
 }
